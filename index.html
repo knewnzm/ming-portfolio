@@ -1,34 +1,146 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>ming</title>
+    <link href="./css/reset.css" rel="stylesheet"> 
+    <link href="./css/nav.css" rel="stylesheet">
+    <link href="./css/side.css" rel="stylesheet">
+    <link href="./css/section.css" rel="stylesheet">
+    <link href="./css/modal.css" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
+    
+    <!-- 네비게이션 -->
+    <nav class="nav">
+        <ul class="nav__wrapper">
+            <li><a href="#about" class="nav__list line">About</a></li>
+            <li><a href="#project" class="nav__list line">Project</a></li>
+            <li><a href="#skill" class="nav__list line">Skill</a></li>
+        </ul>
+    </nav>
 
-        <div class="my_image_area">
-            <div class="my_image"></div>
-        </div>
-
-        <div class="intro_area">
-            <div class="title">
-                타이틀 (간단한 자기소개)
+    <!-- 사이드바 -->
+    <aside id="sidebar">
+        <div class="side__wrapper">
+            <div class="side__item">
+                <div class="side__profile">
+                    <img class="side__profile--img" src="./imgs/char.png">
+                </div>
+                <div class="side__info">
+                    <h3 class="side__info--name info">이름</h3>
+                    <div class="side__info--log info">
+                        <a href="#" class="github info">깃허브</a>
+                        <a href="#" class="velog info">벨로그</a>
+                    </div>
+                </div>
             </div>
-            <button class="more">
-                more
-            </button>
         </div>
+    </aside>
 
+
+    <!-- 푸터 고정 이메일 -->
+    <div class="email info">
+        <div><img src="./imgs/email.png"></div>
+        <div>plutom035@gmail.com</div>
     </div>
-    <footer>
-        <div class="email">
-            <div>아이콘</div>
-            <div>이메일 주소</div>
+
+    <!-- 어바웃 -->
+    <section id="about">
+        <div class="about__wrapper wrapper">
+            <div class="about__intro intro">
+                <div class="about__intro--title title">Introduce</div>
+                <div class="about__intro--content content">자기소개 적을 자리입니다</div>
+            </div>
+            <div class="about__edu intro">
+                <div class="about__edu--title title">Education</div>
+                <div class="about__edu--content content">교육과정</div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- 프로젝트 -->
+    <section id="project">
+        <div class="project__wrapper wrapper">
+                <div class="project__title title">Project</div>
+                <div class="project__content content">
+                        <div class="project__type">팀 프로젝트</div>
+                        <div class="project__name">프룻프룻</div>
+                        <div class="project__box">
+                            <div class="left__arrow"></div>
+                            <div class="project__img"></div>
+                            <div class="right__arrow"></div>
+                        </div>
+                    <div class="more">
+                        <!-- 첫번째 모달 여는 클래스 -->
+                        <button class="more__btn" type="button">MORE</button>
+                    </div>
+                </div>
+                <!-- 프로젝트 모달 상세 -->
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>                         
+                        <p>임시 모달창</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- 스킬 -->
+    <section id="skill">
+        <div class="skill__wrapper">
+            <div class="skill__title title">Skill</div>
+        </div>
+    </section>
+
+    <!-- 프로그래스 바 -->
+    <div class="progress__container">
+        <div class="progress__bar" id="indicator"></div>
+    </div>
+
+    <!-- 상단 이동 버튼 -->
+    <div class="move__wrap">
+        <div class="moveBtn"></div>
+    </div>
+
+    <script>
+    // 인터넷 스크롤 이동 시 이벤트
+        window.onscroll = function() {createPrograssBar()}; 
+        
+        function createPrograssBar() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("indicator").style.height = scrolled + "%";
+        }
+        
+        const topBtn = document.querySelector(".moveBtn");
+        
+        
+        // 버튼 클릭시 페이지 상단으로 이동
+        topBtn.onclick = () => {
+            window.scrollTo({top:0, behavior: "smooth"});
+        }
+    </script>
+
+    <script src=js/modal.js>
+    /*modal.js */
+    </script>
+
+
+
+
 </body>
 </html>
+
+
+
+<!-- 우선 해야 할 것 -->
+요일별 인삿말
+<!-- 상단 이동 버튼 완료 -->
+<!-- 스크롤 바 완료 -->
+모달창
+이미지 슬라이드
+<!-- 즐찾해놨으니 참고해서 만들기 -->

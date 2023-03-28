@@ -1,0 +1,132 @@
+
+
+/* 네비게이션 */
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.nav__wrapper {
+    display: flex;
+    float: right;
+    min-width: 200px;
+    margin: 20px 10px;
+    
+}
+
+.nav__list {
+    color: #539165;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 20px;
+    
+}
+
+.nav__list:hover {
+    color: #3d6d4b;
+}
+
+
+.line:hover {
+    display: inline;
+    box-shadow: inset 0 -10px 0 #D9FCDB;
+    transition: 0.2s all;
+}
+
+/* 프로그래스 바 */
+
+.progress__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 10px;
+    height: 80%;
+    margin: 100px 30px 0 0;
+    background: #f8f8f8;
+}
+
+.progress__bar {
+    height: 0%;
+    background: #539165;
+    width: 10px;
+} 
+
+/* 기본 스크롤 없애기 */
+::-webkit-scrollbar {
+    display: none;
+  }
+
+.move__wrap {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+}
+
+.moveBtn {
+    right: 23px;
+    bottom: 30px;
+    position: fixed;
+    width: 30px;
+    height: 22px;
+    background-image: url(../imgs/arrow.png);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 800px){
+    .nav {
+        z-index: 30;
+        background-color: #fff;
+        box-shadow: 0 0 3px #d9d9d9;
+    }
+    .nav__wrapper {
+        width: 100%;
+        justify-content: space-around;
+        float: none;
+    }
+    .progress__container {
+        display: none;
+    }
+    .progress__bar {
+        display: none;
+    }
+    .moveBtn {
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 500px){
+    .nav {
+        min-width: 250px;
+        z-index: 30;
+        background-color: #fff;
+        box-shadow: 0 0 3px #d9d9d9;
+    }
+    .nav__wrapper {
+        width: 100%;
+        justify-content: space-around;
+        float: none;
+    }
+    .progress__container {
+        display: none;
+    }
+    .progress__bar {
+        display: none;
+    }
+    .moveBtn {
+        display: none;
+    } 
+}
