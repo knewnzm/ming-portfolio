@@ -14,13 +14,10 @@
 }
 
 .side__wrapper {
-    padding: 130px 0 0 0;
+    padding: 170px 0 0 0;
 
 }
 
-.side__item {
-
-}
 
 .side__profile {
     width: 200px;
@@ -55,6 +52,30 @@
     width: 400px;
     background-color: #539165;
 }
+
+/* 인삿말 */
+.greet {
+    position: absolute;
+    width: 240px;
+    height: 60px;
+    top: 10%;
+    background: #fff;
+    color: #539165;
+    border-radius: 5px;
+    padding: 12px 12.8px;
+}
+
+.greet:after {
+    border-top: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 170px;
+}
+
 
 @media screen and (max-width: 1000px){
     #sidebar {

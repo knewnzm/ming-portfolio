@@ -25,6 +25,7 @@
     <!-- 사이드바 -->
     <aside id="sidebar">
         <div class="side__wrapper">
+            <div class="greet">좋은 하루 보내세요.</div>
             <div class="side__item">
                 <div class="side__profile">
                     <img class="side__profile--img" src="./imgs/char.png">
@@ -64,27 +65,69 @@
     <!-- 프로젝트 -->
     <section id="project">
         <div class="project__wrapper wrapper">
-                <div class="project__title title">Project</div>
-                <div class="project__content content">
-                        <div class="project__type">팀 프로젝트</div>
-                        <div class="project__name">프룻프룻</div>
-                        <div class="project__box">
-                            <div class="left__arrow"></div>
-                            <div class="project__img"></div>
-                            <div class="right__arrow"></div>
-                        </div>
-                    <div class="more">
-                        <!-- 첫번째 모달 여는 클래스 -->
-                        <button class="more__btn" type="button">MORE</button>
-                    </div>
+            <div class="project__title title">Project</div>
+
+            <!-- 프로젝트 1 -->
+            <div class="project__content content">
+                <div class="project__type">팀 프로젝트</div>
+                <div class="project__name">프룻프룻</div>
+                <div class="project__box">
+                    <div class="project__img"></div>
                 </div>
-                <!-- 프로젝트 모달 상세 -->
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>                         
-                        <p>임시 모달창</p>
-                    </div>
+                <div class="more">
+                <!-- 첫번째 모달 여는 클래스 -->
+                    <button class="more__btn" type="button">MORE</button>
                 </div>
+            </div>
+            
+            <!-- 프로젝트 모달 1 -->
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>                         
+                    <p>임시 모달창 1</p>
+                </div>
+            </div>
+
+            <!-- 프로젝트 2 -->
+            <div class="project__content">
+                <div class="project__type">개인 프로젝트</div>
+                <div class="project__name">포트폴리오 웹사이트</div>
+                <div class="project__box">
+                    <div class="project__img"></div>
+                </div>
+                <div class="more">
+                <!-- 모달 여는 클래스 -->
+                    <button class="more__btn" type="button">MORE</button>
+                </div>
+            </div>
+
+            <!-- 프로젝트 모달 2 -->
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>                         
+                    <p>임시 모달창 2</p>
+                </div>
+            </div>
+
+            <!-- 프로젝트 3 -->
+            <div class="project__content">
+                <div class="project__type">개인 프로젝트</div>
+                <div class="project__name">0000</div>
+                <div class="project__box">
+                    <div class="project__img"></div>
+                </div>
+                <div class="more">
+                <!-- 모달 여는 클래스 -->
+                    <button class="more__btn" type="button">MORE</button>
+                </div>
+            </div>
+
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>                         
+                    <p>임시 모달창 3</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -105,29 +148,11 @@
         <div class="moveBtn"></div>
     </div>
 
-    <script>
-    // 인터넷 스크롤 이동 시 이벤트
-        window.onscroll = function() {createPrograssBar()}; 
-        
-        function createPrograssBar() {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
-            document.getElementById("indicator").style.height = scrolled + "%";
-        }
-        
-        const topBtn = document.querySelector(".moveBtn");
-        
-        
-        // 버튼 클릭시 페이지 상단으로 이동
-        topBtn.onclick = () => {
-            window.scrollTo({top:0, behavior: "smooth"});
-        }
-    </script>
-
     <script src=js/modal.js>
     /*modal.js */
     </script>
+    <script src=js/event.js></script>
+    <script src=js/date.js></script>
 
 
 
@@ -138,9 +163,9 @@
 
 
 <!-- 우선 해야 할 것 -->
-요일별 인삿말
+<!-- 요일별 인삿말 완료 -->
 <!-- 상단 이동 버튼 완료 -->
 <!-- 스크롤 바 완료 -->
-모달창
-이미지 슬라이드
+<!-- 모달창 완료 -->
+<!-- 이미지 슬라이드 취소 -->
 <!-- 즐찾해놨으니 참고해서 만들기 -->

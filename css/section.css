@@ -25,7 +25,7 @@
 }
 
 .content {
-    border: 3px solid #539165;
+    border-top: 2px solid #539165;
     margin-right: 80px;
     padding: 16px;
 }
@@ -45,6 +45,8 @@
 .project__content {
     height: 100%;
     padding: 6px;
+    margin-right: 80px;        
+    padding: 16px;
 }
 
 .project__type {
@@ -72,14 +74,14 @@
 }
 
 
-.left__arrow {
+.prev {
     margin-right: 5px;
     background-image: url(../imgs/back.png);
     width: 26px;
     height: 26px;
 }
 
-.right__arrow {
+.next {
     margin-left: 5px;
     background-image: url(../imgs/for.png);
     width: 26px;
@@ -147,6 +149,9 @@
     .content {
         margin: 0;
     }
+    .project__content {
+        margin: 0;
+    }
     .project__wrapper {
         margin: 8%;
     }
@@ -169,6 +174,10 @@
     }
     .project__wrapper {
         margin: 3%;
+    }
+    .project__content {
+        margin: 0;
+        padding: 0;
     }
     .skill__wrapper {
         margin: 3%;
