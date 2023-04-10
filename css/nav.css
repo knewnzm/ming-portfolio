@@ -18,7 +18,7 @@
 }
 
 .nav__list {
-    color: #539165;
+    color: #76a4e4;
     font-size: 1.5rem;
     font-weight: 300;
     margin-right: 20px;
@@ -26,13 +26,13 @@
 }
 
 .nav__list:hover {
-    color: #3d6d4b;
+    color: #638ac0;
 }
 
 
 .line:hover {
     display: inline;
-    box-shadow: inset 0 -10px 0 #D9FCDB;
+    box-shadow: inset 0 -10px 0 #c1dbffc2;
     transition: 0.2s all;
 }
 
@@ -42,16 +42,16 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 990;
     width: 10px;
-    height: 80%;
-    margin: 100px 30px 0 0;
-    background: #f8f8f8;
+    height: 100%;
+    /* margin: 100px 30px 0 0; */
+    background: #eeeeee;
 }
 
 .progress__bar {
     height: 0%;
-    background: #539165;
+    background: #76a4e4;
     width: 10px;
 } 
 
@@ -60,33 +60,52 @@
     display: none;
   }
 
+
+/* 상단 이동 버튼 */
 .move__wrap {
+    background: #fff;
+    border: 2px solid #76a4e4;
     position: fixed;
     bottom: 1rem;
-    right: 1rem;
+    right: 1.3rem;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #f8f8f8;
 }
 
 .moveBtn {
-    right: 23px;
-    bottom: 30px;
+    right: 35px;
+    bottom: 39px;
     position: fixed;
-    width: 30px;
-    height: 22px;
-    background-image: url(../imgs/arrow.png);
-    background-repeat: no-repeat;
 }
 
+.moveBtn:before,
+.moveBtn:after {
+  background: #76a4e4;
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+}
+
+.moveBtn:before {
+    transform: rotate(130deg) translateX(-75%);
+    transform-origin: bottom left;
+  }
+  
+  .moveBtn:after {
+    transform: rotate(-130deg) translateX(75%);
+    transform-origin: bottom right;
+  }
 
 
 
 
 
-
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
     .nav {
         z-index: 30;
         background-color: #fff;
@@ -103,7 +122,7 @@
     .progress__bar {
         display: none;
     }
-    .moveBtn {
+    .moveBtn, .move__wrap {
         display: none;
     } 
 }
@@ -126,7 +145,7 @@
     .progress__bar {
         display: none;
     }
-    .moveBtn {
+    .moveBtn, .move__wrap {
         display: none;
     } 
 }

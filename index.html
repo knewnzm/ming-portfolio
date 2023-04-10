@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="./css/reset.css" rel="stylesheet"> 
     <link href="./css/nav.css" rel="stylesheet">
     <link href="./css/side.css" rel="stylesheet">
@@ -25,16 +28,18 @@
     <!-- 사이드바 -->
     <aside id="sidebar">
         <div class="side__wrapper">
-            <div class="greet">좋은 하루 보내세요.</div>
+            <!-- 요일별 인삿말 -->
+            <div class="greet"></div>
+            <!-- 프로필 -->
             <div class="side__item">
                 <div class="side__profile">
-                    <img class="side__profile--img" src="./imgs/char.png">
+                    <img class="side__profile--img" src="">
                 </div>
                 <div class="side__info">
-                    <h3 class="side__info--name info">이름</h3>
+                    <h3 class="side__info--name info">ming</h3>
                     <div class="side__info--log info">
-                        <a href="#" class="github info">깃허브</a>
-                        <a href="#" class="velog info">벨로그</a>
+                        <a href="https://github.com/knewnzm" target="_blank" class="github info">github</a>
+                        <a href="https://velog.io/@plutom035" target="_blank" class="velog info">velog</a>
                     </div>
                 </div>
             </div>
@@ -45,7 +50,7 @@
     <!-- 푸터 고정 이메일 -->
     <div class="email info">
         <div><img src="./imgs/email.png"></div>
-        <div>plutom035@gmail.com</div>
+        <a href="mailto:plutom035@gmail.com">plutom035@gmail.com</a>
     </div>
 
     <!-- 어바웃 -->
@@ -53,7 +58,10 @@
         <div class="about__wrapper wrapper">
             <div class="about__intro intro">
                 <div class="about__intro--title title">Introduce</div>
-                <div class="about__intro--content content">자기소개 적을 자리입니다</div>
+                <div class="about__intro--content content">
+                    <p>노정민</p>
+                    <p></p>
+                </div>
             </div>
             <div class="about__edu intro">
                 <div class="about__edu--title title">Education</div>
@@ -84,7 +92,12 @@
             <div class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>                         
-                    <p>임시 모달창 1</p>
+                    <div>
+                        임시 모달창 1
+                        <p>프로젝트 소개: </p>
+                        <p>프로젝트 기간: </p>
+                        <p></p>
+                    </div>
                 </div>
             </div>
 
@@ -145,7 +158,8 @@
 
     <!-- 상단 이동 버튼 -->
     <div class="move__wrap">
-        <div class="moveBtn"></div>
+        <div class="moveBtn move__btn1"></div>
+        <!-- <div class="moveBtn move__btn2"></div> -->
     </div>
 
     <script src=js/modal.js>

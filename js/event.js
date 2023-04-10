@@ -1,6 +1,6 @@
 // 인터넷 스크롤 이동 시 이벤트
 
-const topBtn = document.querySelector(".moveBtn");
+const topBtn = document.querySelector(".move__wrap");
 
         
 function createPrograssBar() {

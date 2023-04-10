@@ -1,7 +1,7 @@
 
 
 #sidebar {
-    background: #539165;
+    background: #91bfffc2;
     position: fixed;
     top: 0;
     left:0;
@@ -22,24 +22,31 @@
 .side__profile {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background-color: #fff;
+    background: url(../imgs/mimoji2.png) center/cover no-repeat;
 }
 
-.side__profile--img {
+/* .side__profile--img {
     width: 200px;
-}
+    background-image: url(../imgs/mimoji.jpg);
+} */
 
 .side__info {
     padding: 10px 0;
 }
 
 .side__info--name {
-    font-size: 1.2em;
+    font-size: 1.5em;
+}
+
+.side__info--log {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .info {
-    padding-top: 10px;
+    padding-top: 20px;
     color: #fff;
 }
 
@@ -50,7 +57,11 @@
     text-align: center;
     padding: 16px 0;
     width: 400px;
-    background-color: #539165;
+    /* background-color: #91bfffc2; */
+}
+
+.email > a {
+    color: #fff;
 }
 
 /* 인삿말 */
@@ -60,9 +71,10 @@
     height: 60px;
     top: 10%;
     background: #fff;
-    color: #539165;
+    color: #333a3e;
     border-radius: 5px;
     padding: 12px 12.8px;
+    white-space: pre-line;
 }
 
 .greet:after {
@@ -73,7 +85,8 @@
     content: "";
     position: absolute;
     top: 60px;
-    left: 170px;
+    left: 60px;
+    white-space: pre-line;
 }
 
 
@@ -87,7 +100,7 @@
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
     #sidebar {
         position: relative;
         width: 100%;
