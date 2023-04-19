@@ -3,7 +3,7 @@
 /* 어바웃 */
 
 #about {
-    height: 100%
+    height: 100%;
 }
 
 .about__wrapper {
@@ -11,26 +11,60 @@
 }
 
 .intro {
-    margin-bottom: 32px;
+    margin-bottom: 10%;
 }
+
+.intro--content--title {
+    font-size: 1.4em;
+}
+
 
 
 /* 공통 */
 
 .title {
+    display: inline;
+    box-shadow: inset 0 -10px 0 #cae0ff85;
     color: #333a3e;
-    font-size: 1.7rem;
+    font-size: 1.9em;
     font-weight: 600;
     margin: 0 0 2% 4%;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #333a3e;
-    display: inline-block;
 }
 
 .content {
+    min-width: 550px;
     margin: 0 8% 0 4%;
     padding: 16px;
+    font-weight: 300;
 }
+
+/* 섹션 정렬 */
+
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+.s__wrapper {
+    width: 60%;
+}
+
+/* 에듀케이션 */
+
+.about__wrap {
+    margin-bottom: 50px;
+}
+
+.about__wrap__title {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.about__wrap__date {
+    margin-bottom: 20px;
+}
+
+
 
 
 /* 프로젝트 */
@@ -40,14 +74,14 @@
 }
 
 .project__wrapper {
-    margin: 120px 0 0 420px;
+    margin: 0 0 0 420px;
     padding-top: 20px;
 }
 
 .project__content {
-    height: 100%;
+    height: auto;
     padding: 6px;
-    margin-right: 80px;        
+    /* margin-right: 80px;         */
     padding: 16px;
 }
 
@@ -71,9 +105,9 @@
 
 .project__img {
     width: 90%;
-    height: 500px;
-    background: url("../imgs/project1.png") center/cover no-repeat;
+    height: 100%;
 }
+
 
 
 .prev {
@@ -99,7 +133,7 @@
 
 .more__btn {
     margin-bottom: 10%;
-    border: 3px solid #76a4e4;
+    border: 3px solid #91bfff;
     color: #9B9B9B;
     position: relative;
     padding: 2% 4%;
@@ -111,21 +145,43 @@
 }
 
 .more__btn:hover {
-    background-color: #76a4e4;
-    color: #D9FCDB;
+    background-color: #91bfff;
+    color: #a7f2ff;
 }
 
 
 /* 스킬 */
 
 #skill {
-    height: 800px;
+    height: auto;
 }
 
 .skill__wrapper {
     margin: 120px 0 0 420px;
     padding-top: 20px;
 }
+
+.skill__content {
+    margin-bottom: 20%;
+}
+
+.skill__content--text {
+    margin-bottom: 2%;
+}
+
+.skill__content--text h2 {
+    margin-bottom: 2%;
+}
+
+.skill__content--title {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.skill__content--title:first-child {
+    margin-top: 3%;
+}
+
 
 
 
@@ -147,13 +203,36 @@
 } */
 
 
+[data-scroll] {
+    opacity: 0;
+    will-change: transform, scale, opacity;
+    transform: translateY(6rem) scale(0.93);
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  [data-scroll='in'] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  [data-scroll='out'] {
+    opacity: 0;
+  }
+
+
 @media screen and (max-width: 1000px){
+    #about {
+        margin-top: 10%;
+    }
     .about__wrapper {
         margin: 8%;
     }
-    /* .content {
-        margin: 0;
-    } */
+    .content {
+        min-width: 0;
+    }
+    .s__wrapper {
+        width: 80%;
+    }
     .project__content {
         margin: 0;
     }
@@ -163,22 +242,29 @@
     .skill__wrapper {
         margin: 8%;
     }
-    .project__img {
+    /* .project__img {
         height: 400px;
         min-width: 400px;
         min-height: 350px;
-    }
+    } */
 }
 
 @media screen and (max-width: 500px){
+    #about {
+        margin-top: 20%;
+    }
     .about__wrapper {
         margin: 3%;
     }
-    /* .content {
+    .content {
         margin: 0;
-        border: none;
-        padding: 0;
-    } */
+    }
+    .content__wrap__title {
+        font-size: 1.3em;
+    }
+    .s__wrapper {
+        width: 90%;
+    }
     .project__title {
         margin-bottom: 30px;
     }
@@ -192,11 +278,11 @@
     .skill__wrapper {
         margin: 3%;
     }
-    .project__img {
+    /* .project__img {
         height: 250px;
-        min-width: 250px;
+        min-width: 200px;
         min-height: 250px;
-    }
+    } */
     .more__btn {
         margin-bottom: 20%;
     }

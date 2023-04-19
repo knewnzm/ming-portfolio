@@ -37,7 +37,12 @@ function greetByDay() {
 
   window.onload = function() {
     greetByDay();
+    new TypeIt(".greet", {
+      speed: 100,
+      waitUntilVisible: true,
+    }).go();
   };
+
 
 
 

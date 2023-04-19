@@ -13,44 +13,108 @@
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content {
+.modal__content {
+    position: relative;
     background-color: #fefefe;
-    margin: 10% auto;
+    margin: 7% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 600px;
-    height: 650px;
+    height: 700px;
 }
 
+
+
+
+.modal--title {
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.modal--img__area {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.modal--img {
+    width: 90%;
+    height: 100%;
+    margin: 3% 0;
+}
+
+.modal--url {
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    margin: 0 15% 5%;
+}
+
+.modal--url a {
+    margin: 0 3%;
+}
+
+.modal--url a:hover {
+    color: #91bfff;    
+}
+
+.modal--text {
+    margin-left: 6%;
+}
+
+.modal--text dt {
+    width: 20%;
+    margin-bottom: 2%;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.modal--text dd {
+    display: inline-block;
+    font-weight: 200;
+}
+
+
+/* 모달창 닫는 버튼 */
+
+.close__area {
+    display: flex;
+    justify-content: center;
+}
+
+
 .close {
+    border: 2px solid #aaa;
+    width: 40px;
+    padding: 3px;
+    text-align: center;
     color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 4%;
+    font-size: 1em;
+    /* font-weight: bold; */
 }
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
+    color: #91bfff;
+    border: 2px solid #91bfff;
+    /* text-decoration: none; */
     cursor: pointer;
 }
 
 
 @media screen and (max-width: 800px){
-    .modal-content {
+    .modal__content {
         width: 450px;
         height: 60%;
-        margin: 20% auto;
-    }    
-
+        margin: 15% auto;
+    }
+    .modal--text dt {
+        width: 30%;
+    }
+    
 }
 
 
-
-@media screen and (max-width: 500px){
-    .modal-content {
-        width: 90%;
-        height: 50%;
-    }    
-
-}
