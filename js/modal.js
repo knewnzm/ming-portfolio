@@ -15,12 +15,14 @@ function Modal(num) {
     // 해당 클래스의 내용을 클릭하면 Modal 띄움
     btns[num].onclick =  function() {
         modals[num].style.display = "block";
+        document.body.style.overflow = "hidden"; // 스크롤 고정
         console.log(num);
     };
  
     // <span> 태그(X 버튼)를 클릭하면 Modal 닫음
     spanes[num].onclick = function() {
         modals[num].style.display = "none";
+        document.body.style.overflow = "auto"; // 스크롤 해제
     };
   };
 }
@@ -39,5 +41,6 @@ for(let j = 0; j < btns.length; j++) {
 window.onclick = function(event) {
   if (event.target.className == "modal") {
       event.target.style.display = "none";
+      document.body.style.overflow = "auto"; // 스크롤 해제
   }
 };
